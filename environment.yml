@@ -1,0 +1,9 @@
+name: youtube-video-setup
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pytest>=8
+  - pip:
+      - -e .
