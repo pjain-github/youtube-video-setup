@@ -1,73 +1,123 @@
-# YouTube Video Setup
+# YouTube Documentary Production Pipeline
 
-A Python toolkit for generating the audio, video, and animations needed for
-YouTube videos. The initial package provides ElevenLabs text-to-speech and
-speech-to-speech workflows.
+An end-to-end Python production system for automated Kurzgesagt-style 2D animated documentaries.
 
-## Setup
+---
 
-This project requires Python 3.11 or newer. Create a local virtual environment
-and install the development dependencies:
+## Architecture: The 3 Core Pillars
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ 1. AUDIO GENERATION (ElevenLabs)                            │
+│    - Splits narration scripts into API-safe sections        │
+│    - Synthesizes professional broadcast narration           │
+└──────────────────────────────┬──────────────────────────────┘
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ 2. IMAGE GENERATION (Google Gemini Imagen)                  │
+│    - 1920×1080 Full HD 16:9 flat vector Kurzgesagt art      │
+│    - Enforces strict negative constraints (Zero text/words) │
+└──────────────────────────────┬──────────────────────────────┘
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│ 3. VIDEO ANIMATION ENGINE (KurzgesagtAnimator)              │
+│    - 100% distortion-free 2D vector animation               │
+│    - Cinematic camera motion (eased dolly, pan, snap zoom)  │
+│    - Procedural vector FX (strobes, beads, shockwaves, rings│
+│    - Native 1080p Full HD @ 30/60 fps via FFmpeg            │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Quickstart
+
+### 1. Installation
+
+Requires Python 3.11+.
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
+pip install -e ".[dev]"
 ```
 
-Copy `.env.example` to `.env` for local-only configuration. Set your ElevenLabs
-API key in the environment when generating audio:
+Configure your API keys in `.env`:
+```bash
+GEMINI_API_KEY="your-gemini-key"
+ELEVENLABS_API_KEY="your-elevenlabs-key"
+```
+
+---
+
+## Usage
+
+### Pillar 1: ElevenLabs Voiceover Generation
+Generate narration MP3 files from the script:
+```bash
+python -m youtube_video_setup.cli audio \
+  --script inputs/AI_Models_Going_Rogue_YouTube_Script.md \
+  --output-dir audio
+```
+
+### Pillar 2: Gemini 1080p Image Keyframes
+Generate flat vector Kurzgesagt keyframes:
+```bash
+# Test first 5 scenes:
+python -m youtube_video_setup.cli images --scenes inputs/scenes.json --limit 5
+
+# Generate all 119 scenes:
+python -m youtube_video_setup.cli images --scenes inputs/scenes.json
+```
+
+### Pillar 3: Kurzgesagt 2D Video Animation
+Render distortion-free 1080p video clips with eased camera motion and vector FX:
+```bash
+# Render first 5 scenes:
+python -m youtube_video_setup.cli video --scenes inputs/scenes.json --limit 5
+
+# Render all scenes:
+python -m youtube_video_setup.cli video --scenes inputs/scenes.json
+```
+
+### Final Merge: Concatenate Scenes into Full Video
+```bash
+python -m youtube_video_setup.cli merge \
+  --videos-dir videos \
+  --output final_documentary_1080p.mp4
+```
+
+---
+
+## Archived code (`src/youtube_video_setup/_archived/`)
+The Gemini image generator, Kurzgesagt animator, 2D-infographics skill, helper scripts and RunPod tooling are kept in `_archived/` and no longer part of the active workflow.
+
+## RunPod Execution (archived)
+
+For fast execution on RunPod without any trial-and-error:
+See [src/youtube_video_setup/_archived/runpod/README.md](src/youtube_video_setup/_archived/runpod/README.md).
 
 ```bash
-export ELEVENLABS_API_KEY="your-api-key"
+# On RunPod:
+bash src/youtube_video_setup/_archived/runpod/setup_pod.sh
+bash src/youtube_video_setup/_archived/runpod/run_pipeline.sh all 5
 ```
 
-Never commit real credentials or generated recordings.
+---
 
-## Generate a narrated script
+## Media folders
+Only three git-ignored folders hold media: `audio/`, `images/`, `videos/`.
 
-Write the narration to a UTF-8 text file. Blank lines are treated as preferred
-split points, and long scripts are emitted as numbered MP3 files:
+## Remotion motion graphics (active)
+Project: `src/youtube_video_setup/remotion/` (Remotion 4.0.533). Agent skills live in `.agents/skills/` (official `remotion-*` skills + `project-remotion-workflow`).
 
 ```bash
-generate-elevenlabs-parts script.txt YOUR_VOICE_ID --output parts
+source .venv/bin/activate && bash scripts/setup-remotion.sh   # one-time: Node in .venv + npm ci
+cd src/youtube_video_setup/remotion
+npm run studio          # preview at http://localhost:3000
+npm run compositions    # list compositions
+npm run new -- MyVideo  # scaffold + register a composition
+npm run render          # -> out/Showcase.mp4
+npx remotion render src/index.ts MyVideo out/MyVideo.mp4
 ```
-
-The default part limit is 4,000 characters. Override it, or choose a different
-ElevenLabs model, when needed:
-
-```bash
-generate-elevenlabs-parts script.txt YOUR_VOICE_ID \
-  --output parts --max-characters 3000 --model eleven_multilingual_v2
-```
-
-The individual helpers can also be run as modules:
-
-```bash
-python -m youtube_video_setup.elevenlabs_audio.text_to_audio \
-  "Hello from ElevenLabs" YOUR_VOICE_ID output.mp3
-
-python -m youtube_video_setup.elevenlabs_audio.audio_to_audio \
-  input.wav YOUR_VOICE_ID output.mp3
-```
-
-## General CLI
-
-```bash
-youtube-video-setup
-```
-
-## Test
-
-Tests mock the HTTP API, so they are safe to run without credentials:
-
-```bash
-python -m pytest -q
-```
-
-For hosted Codex environments, run:
-
-```bash
-bash scripts/codex-setup.sh
-```
+Resolution, fps and duration: edit `VIDEO` in `src/config.ts`.

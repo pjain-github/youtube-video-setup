@@ -8,18 +8,26 @@ version = "0.1.0"
 description = "Tools for generating YouTube video audio, video, and animations."
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "google-genai>=2.0.0",
+    "pillow>=10.0.0",
+    "python-dotenv>=1.0.0",
+]
 
 [project.optional-dependencies]
 test = ["pytest>=8.0"]
 dev = [
     "pytest>=8.0",
     "ruff>=0.6",
+    "nodeenv>=1.9",
 ]
 
 [project.scripts]
 youtube-video-setup = "youtube_video_setup.cli:main"
+generate-audio = "youtube_video_setup.generate_audio:main"
 generate-elevenlabs-parts = "youtube_video_setup.elevenlabs_audio.main:main"
+generate-gemini-image = "youtube_video_setup._archived.gemini_images.cli:main"
+generate-kurzgesagt-video = "youtube_video_setup._archived.kurzgesagt_animator.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

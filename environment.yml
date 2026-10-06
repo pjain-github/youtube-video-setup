@@ -3,7 +3,9 @@ channels:
   - conda-forge
 dependencies:
   - python=3.12
+  - nodejs=22        # Remotion (src/youtube_video_setup/remotion) needs Node 18+
   - pip
   - pytest>=8
   - pip:
+      - nodeenv      # lets a plain .venv carry its own Node (see scripts/setup-remotion.sh)
       - -e .

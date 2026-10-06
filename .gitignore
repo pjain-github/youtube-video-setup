@@ -27,20 +27,50 @@ env/
 .envrc
 .pypirc
 
-# Editors and notebooks
+# OS / Editor files
+.DS_Store
 .idea/
 .vscode/
 .ipynb_checkpoints/
 
-# Project output
+# Media and Generated Artifacts (DO NOT PUSH TO GITHUB)
+# Only the three media folders exist: audio/, images/, videos/
+audio/*
+images/*
+videos/*
+!audio/.gitkeep
+!images/.gitkeep
+!videos/.gitkeep
 outputs/
 
-# YouTube media folders: keep the folders, ignore their contents
-text_input/**
-!text_input/.gitkeep
-audio_input/**
-!audio_input/.gitkeep
-video_input/**
-!video_input/.gitkeep
-video_output/**
-!video_output/.gitkeep
+# Remotion
+node_modules/
+src/youtube_video_setup/remotion/out/
+src/youtube_video_setup/remotion/.remotion/
+src/youtube_video_setup/remotion/public/media/
+
+# Media file extensions
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.aac
+*.m4a
+*.flac
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Model weights & caches
+*.pth
+*.pt
+*.safetensors
+*.bin
+*.onnx
+hf_cache/
+.cache/
+tmp/
