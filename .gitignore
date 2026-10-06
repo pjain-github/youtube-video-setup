@@ -43,6 +43,10 @@ videos/*
 !videos/.gitkeep
 outputs/
 
+# Input scripts / plans (kept locally, not pushed)
+inputs/*
+!inputs/.gitkeep
+
 # Remotion
 node_modules/
 src/youtube_video_setup/remotion/out/
