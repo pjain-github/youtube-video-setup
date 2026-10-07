@@ -21,6 +21,17 @@ import {ColdMathMatrix} from './ColdMathMatrix';
 import {ChessAndNavAnalogy} from './ChessAndNavAnalogy';
 import {InstrumentalSubgoalTree} from './InstrumentalSubgoalTree';
 import {MathematicalObstacle} from './MathematicalObstacle';
+import {ThreeDoorsCorridor} from './ThreeDoorsCorridor';
+import {FutureOneFlourishing} from './FutureOneFlourishing';
+import {TriadOfControl} from './TriadOfControl';
+import {LeastPrivilegeSandbox} from './LeastPrivilegeSandbox';
+import {HumanInTheLoopModal} from './HumanInTheLoopModal';
+import {TelemetryTripwires} from './TelemetryTripwires';
+import {SynchronizedGears} from './SynchronizedGears';
+import {EvolutionTimeline} from './EvolutionTimeline';
+import {StackingPermissionsTower} from './StackingPermissionsTower';
+import {KnowWhenToStop} from './KnowWhenToStop';
+import {OutroEndScreen} from './OutroEndScreen';
 
 const SCENES = [
   {id: 'ContainmentChamber', component: ContainmentChamber, frames: 210, fps: 30},
@@ -44,6 +55,17 @@ const SCENES = [
   {id: 'ChessAndNavAnalogy', component: ChessAndNavAnalogy, frames: 270, fps: 30},
   {id: 'InstrumentalSubgoalTree', component: InstrumentalSubgoalTree, frames: 270, fps: 30},
   {id: 'MathematicalObstacle', component: MathematicalObstacle, frames: 300, fps: 30},
+  {id: 'ThreeDoorsCorridor', component: ThreeDoorsCorridor, frames: 180, fps: 30},
+  {id: 'FutureOneFlourishing', component: FutureOneFlourishing, frames: 420, fps: 30},
+  {id: 'TriadOfControl', component: TriadOfControl, frames: 270, fps: 30},
+  {id: 'LeastPrivilegeSandbox', component: LeastPrivilegeSandbox, frames: 360, fps: 30},
+  {id: 'HumanInTheLoopModal', component: HumanInTheLoopModal, frames: 300, fps: 30},
+  {id: 'TelemetryTripwires', component: TelemetryTripwires, frames: 360, fps: 30},
+  {id: 'SynchronizedGears', component: SynchronizedGears, frames: 420, fps: 60},
+  {id: 'EvolutionTimeline', component: EvolutionTimeline, frames: 300, fps: 30},
+  {id: 'StackingPermissionsTower', component: StackingPermissionsTower, frames: 330, fps: 30},
+  {id: 'KnowWhenToStop', component: KnowWhenToStop, frames: 270, fps: 30},
+  {id: 'OutroEndScreen', component: OutroEndScreen, frames: 600, fps: 30},
 ] as const;
 
 /** Blueprint animation scenes (1920x1080). Add each new scene to SCENES. */
