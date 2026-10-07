@@ -6,3 +6,7 @@ export const useSpring = (delay = 0) => {
   const {fps} = useVideoConfig();
   return spring({fps, frame: frame - delay, config: {damping: 14, stiffness: 90}});
 };
+
+/** Same blueprint spring as a plain function, for use inside loops/maps. */
+export const springAt = (frame: number, fps: number, delay = 0) =>
+  spring({fps, frame: frame - delay, config: {damping: 14, stiffness: 90}});
