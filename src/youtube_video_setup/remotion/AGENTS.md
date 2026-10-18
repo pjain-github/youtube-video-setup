@@ -6,4 +6,4 @@ Read `.agents/skills/project-remotion-workflow/SKILL.md` (repo root) and the off
 - Format/duration live in `src/config.ts`. Register compositions in `src/Root.tsx`.
 - Animate only via `useCurrentFrame()`; no CSS transitions, no `Math.random()`.
 - New composition: `npm run new -- Name`. Verify: `npm run typecheck && npm run still`. Render: `npm run render`.
-- Media lives in repo-root `audio/`, `images/`, `videos/` (git-ignored; exposed through `public/` symlinks).
+- Media lives in repo-root `video assets/` (`audio/`, `images/`, `videos/`; git-ignored; exposed through `public/` symlinks).

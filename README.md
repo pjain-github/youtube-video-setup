@@ -105,8 +105,14 @@ bash src/youtube_video_setup/_archived/runpod/run_pipeline.sh all 5
 
 ---
 
-## Media folders
-Only three git-ignored folders hold media: `audio/`, `images/`, `videos/`.
+## Video assets
+All audio, images, videos and scratch frames for a video live in one git-ignored folder, `video assets/` (subfolders `audio/`, `images/`, `videos/`, `scratch/`). It is never pushed.
+
+To start a new video, delete the whole folder and recreate it:
+
+```bash
+rm -rf "video assets" && mkdir -p "video assets"/{audio,images,videos,scratch}
+```
 
 ## Remotion motion graphics (active)
 Project: `src/youtube_video_setup/remotion/` (Remotion 4.0.533). Agent skills live in `.agents/skills/` (official `remotion-*` skills + `project-remotion-workflow`).
