@@ -1,0 +1,987 @@
+[
+  {
+    "text": "Everyone",
+    "start": 0.48,
+    "end": 0.56
+  },
+  {
+    "text": "said",
+    "start": 0.68,
+    "end": 0.8
+  },
+  {
+    "text": "Google",
+    "start": 0.88,
+    "end": 1.2
+  },
+  {
+    "text": "was",
+    "start": 1.36,
+    "end": 1.52
+  },
+  {
+    "text": "finished.",
+    "start": 1.6,
+    "end": 2.32
+  },
+  {
+    "text": "Then",
+    "start": 2.766,
+    "end": 2.8
+  },
+  {
+    "text": "Gemini",
+    "start": 2.88,
+    "end": 3.2
+  },
+  {
+    "text": "4",
+    "start": 3.28,
+    "end": 3.44
+  },
+  {
+    "text": "Argon",
+    "start": 3.52,
+    "end": 3.92
+  },
+  {
+    "text": "dropped,",
+    "start": 4.0,
+    "end": 4.36
+  },
+  {
+    "text": "and",
+    "start": 4.4,
+    "end": 4.56
+  },
+  {
+    "text": "Google",
+    "start": 4.72,
+    "end": 4.88
+  },
+  {
+    "text": "claimed",
+    "start": 5.04,
+    "end": 5.2
+  },
+  {
+    "text": "number",
+    "start": 5.28,
+    "end": 5.52
+  },
+  {
+    "text": "one!",
+    "start": 5.6,
+    "end": 5.92
+  },
+  {
+    "text": "But",
+    "start": 6.747,
+    "end": 6.8
+  },
+  {
+    "text": "testers",
+    "start": 6.92,
+    "end": 7.28
+  },
+  {
+    "text": "watched",
+    "start": 7.36,
+    "end": 7.6
+  },
+  {
+    "text": "it",
+    "start": 7.68,
+    "end": 7.76
+  },
+  {
+    "text": "walk",
+    "start": 7.88,
+    "end": 8.0
+  },
+  {
+    "text": "straight",
+    "start": 8.08,
+    "end": 8.48
+  },
+  {
+    "text": "through",
+    "start": 8.6,
+    "end": 8.72
+  },
+  {
+    "text": "solid",
+    "start": 8.8,
+    "end": 9.04
+  },
+  {
+    "text": "walls.",
+    "start": 9.2,
+    "end": 9.92
+  },
+  {
+    "text": "So...",
+    "start": 10.24,
+    "end": 11.04
+  },
+  {
+    "text": "is",
+    "start": 11.24,
+    "end": 11.28
+  },
+  {
+    "text": "Google",
+    "start": 11.36,
+    "end": 11.6
+  },
+  {
+    "text": "back?",
+    "start": 11.76,
+    "end": 12.16
+  },
+  {
+    "text": "Or",
+    "start": 12.747,
+    "end": 12.8
+  },
+  {
+    "text": "is",
+    "start": 13.04,
+    "end": 13.2
+  },
+  {
+    "text": "this",
+    "start": 13.28,
+    "end": 13.52
+  },
+  {
+    "text": "all",
+    "start": 13.6,
+    "end": 13.76
+  },
+  {
+    "text": "hype?",
+    "start": 13.92,
+    "end": 14.32
+  },
+  {
+    "text": "For",
+    "start": 14.944,
+    "end": 14.96
+  },
+  {
+    "text": "the",
+    "start": 15.0,
+    "end": 15.04
+  },
+  {
+    "text": "past",
+    "start": 15.12,
+    "end": 15.36
+  },
+  {
+    "text": "six",
+    "start": 15.44,
+    "end": 15.68
+  },
+  {
+    "text": "months,",
+    "start": 15.76,
+    "end": 16.16
+  },
+  {
+    "text": "the",
+    "start": 16.24,
+    "end": 16.32
+  },
+  {
+    "text": "sentiment",
+    "start": 16.44,
+    "end": 16.72
+  },
+  {
+    "text": "across",
+    "start": 16.8,
+    "end": 17.12
+  },
+  {
+    "text": "tech",
+    "start": 17.24,
+    "end": 17.36
+  },
+  {
+    "text": "Twitter",
+    "start": 17.44,
+    "end": 17.68
+  },
+  {
+    "text": "and",
+    "start": 17.72,
+    "end": 17.76
+  },
+  {
+    "text": "developer",
+    "start": 17.84,
+    "end": 18.24
+  },
+  {
+    "text": "forums",
+    "start": 18.32,
+    "end": 18.64
+  },
+  {
+    "text": "has",
+    "start": 18.72,
+    "end": 18.8
+  },
+  {
+    "text": "been",
+    "start": 18.88,
+    "end": 19.04
+  },
+  {
+    "text": "almost",
+    "start": 19.12,
+    "end": 19.44
+  },
+  {
+    "text": "unanimous:",
+    "start": 19.52,
+    "end": 20.72
+  },
+  {
+    "text": "Google",
+    "start": 20.8,
+    "end": 21.12
+  },
+  {
+    "text": "had",
+    "start": 21.24,
+    "end": 21.36
+  },
+  {
+    "text": "lost",
+    "start": 21.44,
+    "end": 21.68
+  },
+  {
+    "text": "the",
+    "start": 21.76,
+    "end": 21.84
+  },
+  {
+    "text": "lead",
+    "start": 21.96,
+    "end": 22.08
+  },
+  {
+    "text": "in",
+    "start": 22.16,
+    "end": 22.24
+  },
+  {
+    "text": "the",
+    "start": 22.293,
+    "end": 22.347
+  },
+  {
+    "text": "frontier",
+    "start": 22.4,
+    "end": 22.8
+  },
+  {
+    "text": "AI",
+    "start": 22.88,
+    "end": 23.12
+  },
+  {
+    "text": "race.",
+    "start": 23.2,
+    "end": 23.92
+  },
+  {
+    "text": "Anthropic",
+    "start": 24.13,
+    "end": 24.48
+  },
+  {
+    "text": "made",
+    "start": 24.6,
+    "end": 24.72
+  },
+  {
+    "text": "Claude",
+    "start": 24.8,
+    "end": 25.04
+  },
+  {
+    "text": "Code",
+    "start": 25.12,
+    "end": 25.28
+  },
+  {
+    "text": "the",
+    "start": 25.36,
+    "end": 25.44
+  },
+  {
+    "text": "daily",
+    "start": 25.52,
+    "end": 25.76
+  },
+  {
+    "text": "driver",
+    "start": 25.84,
+    "end": 26.16
+  },
+  {
+    "text": "for",
+    "start": 26.24,
+    "end": 26.32
+  },
+  {
+    "text": "software",
+    "start": 26.4,
+    "end": 26.72
+  },
+  {
+    "text": "engineers,",
+    "start": 26.8,
+    "end": 27.6
+  },
+  {
+    "text": "OpenAI",
+    "start": 27.68,
+    "end": 28.24
+  },
+  {
+    "text": "pushed",
+    "start": 28.32,
+    "end": 28.52
+  },
+  {
+    "text": "autonomous",
+    "start": 28.56,
+    "end": 29.04
+  },
+  {
+    "text": "reasoning",
+    "start": 29.12,
+    "end": 29.44
+  },
+  {
+    "text": "with",
+    "start": 29.52,
+    "end": 29.6
+  },
+  {
+    "text": "Astra,",
+    "start": 29.68,
+    "end": 30.48
+  },
+  {
+    "text": "and",
+    "start": 30.56,
+    "end": 30.64
+  },
+  {
+    "text": "Google",
+    "start": 30.72,
+    "end": 31.04
+  },
+  {
+    "text": "seemed",
+    "start": 31.08,
+    "end": 31.36
+  },
+  {
+    "text": "stuck",
+    "start": 31.44,
+    "end": 31.68
+  },
+  {
+    "text": "on",
+    "start": 31.76,
+    "end": 31.92
+  },
+  {
+    "text": "incremental",
+    "start": 32.0,
+    "end": 32.48
+  },
+  {
+    "text": "Flash",
+    "start": 32.56,
+    "end": 32.8
+  },
+  {
+    "text": "updates",
+    "start": 32.88,
+    "end": 33.28
+  },
+  {
+    "text": "while",
+    "start": 33.36,
+    "end": 33.6
+  },
+  {
+    "text": "quietly",
+    "start": 33.68,
+    "end": 34.16
+  },
+  {
+    "text": "shelving",
+    "start": 34.2,
+    "end": 34.56
+  },
+  {
+    "text": "Gemini",
+    "start": 34.64,
+    "end": 34.96
+  },
+  {
+    "text": "3.5",
+    "start": 35.0,
+    "end": 35.04
+  },
+  {
+    "text": "Pro.",
+    "start": 35.2,
+    "end": 36.4
+  },
+  {
+    "text": "Every",
+    "start": 36.48,
+    "end": 36.64
+  },
+  {
+    "text": "developer",
+    "start": 36.72,
+    "end": 37.12
+  },
+  {
+    "text": "was",
+    "start": 37.2,
+    "end": 37.28
+  },
+  {
+    "text": "asking",
+    "start": 37.36,
+    "end": 37.68
+  },
+  {
+    "text": "the",
+    "start": 37.8,
+    "end": 37.92
+  },
+  {
+    "text": "same",
+    "start": 38.04,
+    "end": 38.16
+  },
+  {
+    "text": "question:",
+    "start": 38.24,
+    "end": 39.12
+  },
+  {
+    "text": "can",
+    "start": 39.24,
+    "end": 39.36
+  },
+  {
+    "text": "Google",
+    "start": 39.52,
+    "end": 39.68
+  },
+  {
+    "text": "build",
+    "start": 39.8,
+    "end": 39.92
+  },
+  {
+    "text": "a",
+    "start": 40.0,
+    "end": 40.08
+  },
+  {
+    "text": "frontier",
+    "start": 40.2,
+    "end": 40.48
+  },
+  {
+    "text": "reasoning",
+    "start": 40.56,
+    "end": 40.96
+  },
+  {
+    "text": "model",
+    "start": 41.08,
+    "end": 41.2
+  },
+  {
+    "text": "that",
+    "start": 41.28,
+    "end": 41.44
+  },
+  {
+    "text": "actually",
+    "start": 41.68,
+    "end": 41.92
+  },
+  {
+    "text": "competes?",
+    "start": 42.12,
+    "end": 42.88
+  },
+  {
+    "text": "This",
+    "start": 42.96,
+    "end": 43.12
+  },
+  {
+    "text": "week,",
+    "start": 43.2,
+    "end": 43.6
+  },
+  {
+    "text": "Google",
+    "start": 43.8,
+    "end": 44.0
+  },
+  {
+    "text": "finally",
+    "start": 44.08,
+    "end": 44.48
+  },
+  {
+    "text": "broke",
+    "start": 44.533,
+    "end": 44.64
+  },
+  {
+    "text": "their",
+    "start": 44.72,
+    "end": 44.88
+  },
+  {
+    "text": "silence",
+    "start": 45.0,
+    "end": 45.28
+  },
+  {
+    "text": "with",
+    "start": 45.4,
+    "end": 45.52
+  },
+  {
+    "text": "Gemini",
+    "start": 45.6,
+    "end": 45.92
+  },
+  {
+    "text": "4",
+    "start": 46.0,
+    "end": 46.24
+  },
+  {
+    "text": "Argon,",
+    "start": 46.32,
+    "end": 47.04
+  },
+  {
+    "text": "a",
+    "start": 47.12,
+    "end": 47.2
+  },
+  {
+    "text": "ground-up",
+    "start": 47.4,
+    "end": 47.84
+  },
+  {
+    "text": "multimodal",
+    "start": 47.92,
+    "end": 48.48
+  },
+  {
+    "text": "reasoning",
+    "start": 48.56,
+    "end": 48.88
+  },
+  {
+    "text": "model",
+    "start": 48.96,
+    "end": 49.2
+  },
+  {
+    "text": "claiming",
+    "start": 49.28,
+    "end": 49.68
+  },
+  {
+    "text": "world",
+    "start": 49.84,
+    "end": 50.0
+  },
+  {
+    "text": "number",
+    "start": 50.12,
+    "end": 50.24
+  },
+  {
+    "text": "one",
+    "start": 50.36,
+    "end": 50.48
+  },
+  {
+    "text": "benchmark",
+    "start": 50.68,
+    "end": 50.88
+  },
+  {
+    "text": "scores",
+    "start": 50.96,
+    "end": 51.28
+  },
+  {
+    "text": "in",
+    "start": 51.36,
+    "end": 51.44
+  },
+  {
+    "text": "enterprise",
+    "start": 51.68,
+    "end": 51.92
+  },
+  {
+    "text": "automation,",
+    "start": 52.2,
+    "end": 52.8
+  },
+  {
+    "text": "legal",
+    "start": 52.88,
+    "end": 53.12
+  },
+  {
+    "text": "analysis,",
+    "start": 53.44,
+    "end": 53.8
+  },
+  {
+    "text": "and",
+    "start": 53.84,
+    "end": 54.0
+  },
+  {
+    "text": "physical-spatial",
+    "start": 54.16,
+    "end": 54.8
+  },
+  {
+    "text": "intelligence.",
+    "start": 55.16,
+    "end": 55.92
+  },
+  {
+    "text": "Over",
+    "start": 56.06,
+    "end": 56.08
+  },
+  {
+    "text": "the",
+    "start": 56.16,
+    "end": 56.24
+  },
+  {
+    "text": "past",
+    "start": 56.36,
+    "end": 56.48
+  },
+  {
+    "text": "72",
+    "start": 56.56,
+    "end": 56.96
+  },
+  {
+    "text": "hours,",
+    "start": 57.04,
+    "end": 57.6
+  },
+  {
+    "text": "independent",
+    "start": 57.68,
+    "end": 58.08
+  },
+  {
+    "text": "researchers",
+    "start": 58.28,
+    "end": 58.64
+  },
+  {
+    "text": "and",
+    "start": 58.68,
+    "end": 58.72
+  },
+  {
+    "text": "creators",
+    "start": 58.8,
+    "end": 59.28
+  },
+  {
+    "text": "put",
+    "start": 59.36,
+    "end": 59.44
+  },
+  {
+    "text": "Argon",
+    "start": 59.52,
+    "end": 59.84
+  },
+  {
+    "text": "to",
+    "start": 59.88,
+    "end": 59.92
+  },
+  {
+    "text": "the",
+    "start": 60.0,
+    "end": 60.08
+  },
+  {
+    "text": "test:",
+    "start": 60.16,
+    "end": 60.88
+  },
+  {
+    "text": "computer",
+    "start": 60.96,
+    "end": 61.28
+  },
+  {
+    "text": "vision",
+    "start": 61.36,
+    "end": 61.6
+  },
+  {
+    "text": "at",
+    "start": 61.64,
+    "end": 61.68
+  },
+  {
+    "text": "Roboflow,",
+    "start": 61.76,
+    "end": 62.56
+  },
+  {
+    "text": "robotics",
+    "start": 62.64,
+    "end": 63.04
+  },
+  {
+    "text": "simulation",
+    "start": 63.12,
+    "end": 63.6
+  },
+  {
+    "text": "at",
+    "start": 63.68,
+    "end": 63.76
+  },
+  {
+    "text": "DataCamp,",
+    "start": 63.92,
+    "end": 64.56
+  },
+  {
+    "text": "and",
+    "start": 64.6,
+    "end": 64.64
+  },
+  {
+    "text": "creative",
+    "start": 64.72,
+    "end": 65.2
+  },
+  {
+    "text": "3D",
+    "start": 65.28,
+    "end": 65.52
+  },
+  {
+    "text": "builds",
+    "start": 65.6,
+    "end": 65.84
+  },
+  {
+    "text": "across",
+    "start": 65.96,
+    "end": 66.32
+  },
+  {
+    "text": "YouTube.",
+    "start": 66.4,
+    "end": 67.0
+  },
+  {
+    "text": "The",
+    "start": 67.269,
+    "end": 67.28
+  },
+  {
+    "text": "results",
+    "start": 67.56,
+    "end": 67.84
+  },
+  {
+    "text": "reveal",
+    "start": 67.92,
+    "end": 68.24
+  },
+  {
+    "text": "a",
+    "start": 68.28,
+    "end": 68.32
+  },
+  {
+    "text": "split.",
+    "start": 68.4,
+    "end": 68.96
+  },
+  {
+    "text": "On",
+    "start": 69.32,
+    "end": 69.36
+  },
+  {
+    "text": "some",
+    "start": 69.44,
+    "end": 69.52
+  },
+  {
+    "text": "tasks,",
+    "start": 69.6,
+    "end": 70.16
+  },
+  {
+    "text": "Google",
+    "start": 70.24,
+    "end": 70.48
+  },
+  {
+    "text": "blew",
+    "start": 70.64,
+    "end": 70.96
+  },
+  {
+    "text": "the",
+    "start": 71.0,
+    "end": 71.04
+  },
+  {
+    "text": "competition",
+    "start": 71.12,
+    "end": 71.68
+  },
+  {
+    "text": "out",
+    "start": 71.84,
+    "end": 71.92
+  },
+  {
+    "text": "of",
+    "start": 72.0,
+    "end": 72.04
+  },
+  {
+    "text": "the",
+    "start": 72.08,
+    "end": 72.16
+  },
+  {
+    "text": "water.",
+    "start": 72.32,
+    "end": 72.84
+  },
+  {
+    "text": "On",
+    "start": 73.168,
+    "end": 73.2
+  },
+  {
+    "text": "others,",
+    "start": 73.44,
+    "end": 73.84
+  },
+  {
+    "text": "there's",
+    "start": 73.88,
+    "end": 74.0
+  },
+  {
+    "text": "a",
+    "start": 74.12,
+    "end": 74.24
+  },
+  {
+    "text": "massive",
+    "start": 74.32,
+    "end": 74.64
+  },
+  {
+    "text": "divide",
+    "start": 74.72,
+    "end": 75.04
+  },
+  {
+    "text": "between",
+    "start": 75.12,
+    "end": 75.36
+  },
+  {
+    "text": "what",
+    "start": 75.44,
+    "end": 75.52
+  },
+  {
+    "text": "the",
+    "start": 75.56,
+    "end": 75.6
+  },
+  {
+    "text": "benchmarks",
+    "start": 75.68,
+    "end": 76.16
+  },
+  {
+    "text": "promise,",
+    "start": 76.24,
+    "end": 77.04
+  },
+  {
+    "text": "and",
+    "start": 77.08,
+    "end": 77.12
+  },
+  {
+    "text": "what",
+    "start": 77.2,
+    "end": 77.28
+  },
+  {
+    "text": "developers",
+    "start": 77.56,
+    "end": 77.84
+  },
+  {
+    "text": "actually",
+    "start": 78.0,
+    "end": 78.32
+  },
+  {
+    "text": "experience.",
+    "start": 78.4,
+    "end": 79.36
+  }
+]

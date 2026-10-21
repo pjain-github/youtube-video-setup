@@ -9,6 +9,11 @@ type Props = {
   dotSpacing?: number;
   /** Optional ambient warm accent blooms */
   ambientBlooms?: boolean;
+  /** Canvas colour (defaults to the warm paper theme) */
+  background?: string;
+  dotColor?: string;
+  /** Skip the radial fade so dots are evenly visible everywhere */
+  uniformDots?: boolean;
 };
 
 /**
@@ -19,6 +24,9 @@ export const AnimatedBackground: React.FC<Props> = ({
   dotGrid = true,
   dotSpacing = 22,
   ambientBlooms = false,
+  background = theme.background,
+  dotColor = '#D4CEC2',
+  uniformDots = false,
 }) => {
   const frame = useCurrentFrame();
   const {width, height} = useVideoConfig();
@@ -26,7 +34,7 @@ export const AnimatedBackground: React.FC<Props> = ({
   return (
     <AbsoluteFill
       style={{
-        background: theme.background,
+        background,
         overflow: 'hidden',
       }}
     >
@@ -53,7 +61,7 @@ export const AnimatedBackground: React.FC<Props> = ({
                 cx={dotSpacing / 2}
                 cy={dotSpacing / 2}
                 r={1.2}
-                fill="#D4CEC2"
+                fill={dotColor}
               />
             </pattern>
             {/* Radial vignette mask to softly fade dots toward edges/top */}
@@ -70,7 +78,7 @@ export const AnimatedBackground: React.FC<Props> = ({
             width="100%"
             height="100%"
             fill="url(#dot-grid-pattern)"
-            mask="url(#dot-mask)"
+            mask={uniformDots ? undefined : "url(#dot-mask)"}
           />
         </svg>
       )}
