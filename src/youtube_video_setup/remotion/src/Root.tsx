@@ -25,6 +25,8 @@ import {ArgonV2Part4, PART4_FRAMES} from './compositions/ArgonV2/Part4';
 import {ArgonV2Part5, PART5_FRAMES} from './compositions/ArgonV2/Part5';
 import {ArgonV2Part6, PART6_FRAMES} from './compositions/ArgonV2/Part6';
 import {FramedDownloadVideoInspect, DOWNLOAD_VIDEO_FRAMES} from './compositions/Explainer/FramedDownloadVideoInspect';
+import {CleanViralShort, CLEAN_SHORT_FRAMES} from './compositions/CleanViralShort';
+import {ClaudeDuetMocks, CLAUDE_DUET_MOCKS_FRAMES} from './compositions/ClaudeDuetMocks';
 
 /**
  * Register every composition here. Format comes from src/config.ts.
@@ -33,6 +35,22 @@ import {FramedDownloadVideoInspect, DOWNLOAD_VIDEO_FRAMES} from './compositions/
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="CleanViralShort"
+        component={CleanViralShort}
+        width={1080}
+        height={1920}
+        fps={30}
+        durationInFrames={CLEAN_SHORT_FRAMES}
+      />
+      <Composition
+        id="ClaudeDuetMocks"
+        component={ClaudeDuetMocks}
+        width={1080}
+        height={1920}
+        fps={30}
+        durationInFrames={CLAUDE_DUET_MOCKS_FRAMES}
+      />
       <Composition
         id="Showcase"
         component={Showcase}

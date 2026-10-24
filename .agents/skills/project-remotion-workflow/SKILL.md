@@ -30,7 +30,22 @@ Also load the official `remotion-best-practices` skill for API details.
 2. Build with `TransitionSeries` (from `@remotion/transitions`) for scenes; derive scene lengths from `useVideoConfig()` / seconds, never hard-coded frames.
 3. Reuse components before writing new ones; add new shared pieces to `src/components`.
 
-## Visual & Animation rules (Editorial Tech Explainer Style)
+## Visual & Animation Styles Available in Repo
+1. **Editorial Tech Explainer Style** (`remotion-general-animation` / `remotion-story-style`):
+   - Warm paper cream (`#F6F4EE`) canvas with subtle dot-matrix texture.
+   - Serif + Grotesque Sans + Monospace pairing.
+   - Neo-brutalist cards with `2px solid #111111` borders and `4px 4px 0px #111111` hard offset shadows.
+   - Animated yellow highlighter strokes (`#FFE600`).
+
+2. **Clean Tech UI / Viral Tech Updates** (`remotion-clean-animations` & `remotion-clean-animations-long`):
+   - Deep obsidian / dark navy slate (`#090D16`) with radial glow blobs and subtle digital grid.
+   - Sleek glassmorphism (`rgba(15, 23, 42, 0.75)` with `1px solid rgba(255, 255, 255, 0.1)`).
+   - macOS Terminal windows with traffic lights, typing command line, and syntax output.
+   - Comparative benchmark bars with animated fill percentages and glowing accents.
+   - Short format: `remotion-clean-animations` (9:16 vertical 1080x1920 mobile safe-zone optimized).
+   - Long format: `remotion-clean-animations-long` (16:9 widescreen 1920x1080 multi-column & pipeline layouts).
+
+## Visual & Animation rules
 - **Canvas:** Use warm paper cream (`#F6F4EE` or `#F7F5F0`) with a subtle dot-matrix texture. Avoid pure harsh `#FFFFFF` or dark backgrounds.
 - **Typography Pairing:**
   - Serif (Newsreader, Playfair Display, Georgia) for narrative/intro phrases and italic hooks.
