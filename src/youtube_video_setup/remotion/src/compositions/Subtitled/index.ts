@@ -1,0 +1,1 @@
+export {Subtitled} from './Subtitled';

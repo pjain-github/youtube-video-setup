@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import base64
 import json
 import os
 import uuid
@@ -80,6 +81,29 @@ class ElevenLabsError(RuntimeError):
     """Raised when ElevenLabs rejects a request."""
 
 
+def alignment_to_words(alignment: Mapping[str, Any]) -> list[dict[str, Any]]:
+    """Group ElevenLabs character-level alignment into ``{text, start, end}`` words."""
+    chars = alignment["characters"]
+    starts = alignment["character_start_times_seconds"]
+    ends = alignment["character_end_times_seconds"]
+    words: list[dict[str, Any]] = []
+    current: list[str] = []
+    word_start = word_end = 0.0
+    for char, start, end in zip(chars, starts, ends, strict=True):
+        if char.isspace():
+            if current:
+                words.append({"text": "".join(current), "start": word_start, "end": word_end})
+                current = []
+            continue
+        if not current:
+            word_start = start
+        current.append(char)
+        word_end = end
+    if current:
+        words.append({"text": "".join(current), "start": word_start, "end": word_end})
+    return words
+
+
 class ElevenLabsClient:
     """Create audio with ElevenLabs using an API key from the environment."""
 
@@ -124,7 +148,7 @@ class ElevenLabsClient:
         voice_id: str,
         output: str | Path,
         *,
-        model_id: str = "eleven_multilingual_v2",
+        model_id: str = "eleven_v4",
         voice_settings: Mapping[str, Any] | None = None,
     ) -> Path:
         """Synthesize ``text`` and save the returned MP3."""
@@ -140,6 +164,41 @@ class ElevenLabsClient:
             timeout=self.timeout,
         )
         return self._save_response(response, output)
+
+    def text_to_speech_with_timestamps(
+        self,
+        text: str,
+        voice_id: str,
+        output: str | Path,
+        *,
+        model_id: str = "eleven_v4",
+        voice_settings: Mapping[str, Any] | None = None,
+    ) -> list[dict[str, Any]]:
+        """Synthesize ``text``, save the MP3 and return word timings from the same call.
+
+        Timings come from ElevenLabs' own alignment of the generated audio, so no
+        speech-to-text pass is needed. Each word is ``{"text", "start", "end"}`` in seconds.
+        """
+        if not text.strip():
+            raise ValueError("text cannot be empty")
+        payload: dict[str, Any] = {"text": text, "model_id": model_id}
+        if voice_settings:
+            payload["voice_settings"] = dict(voice_settings)
+        response = self.session.post(
+            f"{self.base_url}/text-to-speech/{voice_id}/with-timestamps",
+            headers={**self.headers, "accept": "application/json", "content-type": "application/json"},
+            json=payload,
+            timeout=self.timeout,
+        )
+        try:
+            response.raise_for_status()
+        except HTTPError as exc:
+            raise ElevenLabsError(f"ElevenLabs request failed: {response.text}") from exc
+        data = response.json()
+        destination = Path(output)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(base64.b64decode(data["audio_base64"]))
+        return alignment_to_words(data["alignment"])
 
     def speech_to_speech(
         self,

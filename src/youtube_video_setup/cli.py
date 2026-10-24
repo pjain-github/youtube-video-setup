@@ -82,7 +82,7 @@ def run_video(
     print(f"Rendering {len(scenes)} video clips...")
     for scene in scenes:
         scene_id = scene.get("id", 1)
-        local_img = scene.get("local_image") or f"images/image_{scene_id:03d}.png"
+        local_img = scene.get("local_image") or f"video assets/images/image_{scene_id:03d}.png"
         if not Path(local_img).exists():
             print(f"Warning: Keyframe {local_img} missing. Skipping scene {scene_id:03d}.")
             continue

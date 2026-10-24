@@ -2,7 +2,7 @@ import React from 'react';
 import {Audio, interpolate, staticFile, useVideoConfig} from 'remotion';
 
 type Props = {
-  /** Path relative to public/, e.g. "audio/narration.mp3" */
+  /** Path relative to public/, e.g. "video assets/audio/narration.mp3" */
   src: string;
   volume?: number;
   fadeInSeconds?: number;

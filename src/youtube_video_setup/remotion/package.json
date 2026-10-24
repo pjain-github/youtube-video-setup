@@ -7,7 +7,7 @@
     "studio": "remotion studio src/index.ts",
     "compositions": "remotion compositions src/index.ts",
     "render": "remotion render src/index.ts Showcase out/Showcase.mp4",
-    "still": "remotion still src/index.ts Showcase out/Showcase.png --frame=60",
+    "still": "remotion still src/index.ts Showcase ../../../video\\ assets/images/remotion_image/Showcase.png --frame=60",
     "typecheck": "tsc --noEmit",
     "upgrade": "remotion upgrade",
     "new": "node scripts/new-composition.mjs"
