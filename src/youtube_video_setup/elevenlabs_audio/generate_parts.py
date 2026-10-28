@@ -45,7 +45,7 @@ def generate_parts(
     *,
     client: ElevenLabsClient | None = None,
     max_characters: int = 4_000,
-    model_id: str = "eleven_multilingual_v2",
+    model_id: str = "eleven_v4",
 ) -> list[Path]:
     """Generate numbered MP3 files for every section of ``text``."""
     sections = split_text(text, max_characters)

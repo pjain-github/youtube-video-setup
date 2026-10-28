@@ -57,8 +57,10 @@ Generate narration MP3 files from the script:
 ```bash
 python -m youtube_video_setup.cli audio \
   --script inputs/AI_Models_Going_Rogue_YouTube_Script.md \
-  --output-dir audio
+  --output-dir audio \
+  --voice-id narrator
 ```
+Named voices live in `src/youtube_video_setup/elevenlabs_audio/voices.py`: `narrator` and `energetic` (Liam). A raw voice ID also works.
 
 ### Pillar 2: Gemini 1080p Image Keyframes
 Generate flat vector Kurzgesagt keyframes:

@@ -120,7 +120,7 @@ def main() -> None:
     p_audio = subparsers.add_parser("audio", help="Generate ElevenLabs audio voiceover")
     p_audio.add_argument("--script", default="inputs/AI_Models_Going_Rogue_YouTube_Script.md", help="Path to narration script")
     p_audio.add_argument("--output-dir", default="audio", help="Output audio directory")
-    p_audio.add_argument("--voice-id", help="Optional ElevenLabs voice ID")
+    p_audio.add_argument("--voice-id", help="Optional ElevenLabs voice ID or name (narrator, energetic)")
 
     # Images command
     p_images = subparsers.add_parser("images", help="Generate Gemini 1080p keyframe images")

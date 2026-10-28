@@ -12,6 +12,7 @@ import urllib.request
 from pathlib import Path
 
 from youtube_video_setup.elevenlabs_audio.elevenlabs_client import ElevenLabsClient
+from youtube_video_setup.elevenlabs_audio.voices import VOICES, resolve_voice
 
 VOICE_ID_DEFAULT = "C1npRmjB19a6yNkEucvx"
 SCRIPT_DEFAULT = Path("inputs/Bytesplained Music Video with Claude Code on the Web + Remotion (Production Script).md")
@@ -108,11 +109,12 @@ def concatenate_audio_files(file_list: list[Path], output_path: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate ElevenLabs narration audio for production script.")
     parser.add_argument("--script", type=Path, default=SCRIPT_DEFAULT, help="Path to production script markdown")
-    parser.add_argument("--voice-id", default=VOICE_ID_DEFAULT, help="ElevenLabs Voice ID")
+    parser.add_argument("--voice-id", default=VOICE_ID_DEFAULT, help=f"ElevenLabs Voice ID or name ({', '.join(VOICES)})")
     parser.add_argument("--output-dir", type=Path, default=OUTPUT_DIR_DEFAULT, help="Directory to save audio files")
-    parser.add_argument("--model", default="eleven_multilingual_v2", help="ElevenLabs model ID")
+    parser.add_argument("--model", default="eleven_v4", help="ElevenLabs model ID")
     parser.add_argument("--dry-run", action="store_true", help="Print narrations without calling API")
     args = parser.parse_args()
+    args.voice_id = resolve_voice(args.voice_id)
 
     load_env()
     api_key = os.getenv("ELEVENLABS_API_KEY", "")

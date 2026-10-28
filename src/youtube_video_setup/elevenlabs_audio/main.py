@@ -14,7 +14,7 @@ def main() -> None:
     parser.add_argument("voice_id", help="ElevenLabs voice identifier")
     parser.add_argument("--output", type=Path, default=Path("parts"))
     parser.add_argument("--max-characters", type=int, default=4_000)
-    parser.add_argument("--model", default="eleven_multilingual_v2")
+    parser.add_argument("--model", default="eleven_v4")
     args = parser.parse_args()
     paths = generate_parts(
         args.script.read_text(encoding="utf-8"),
